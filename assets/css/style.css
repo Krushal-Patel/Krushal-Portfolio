@@ -138,3 +138,51 @@ section {
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
 }
+
+/* ===== Education Timeline ===== */
+.timeline {
+  position: relative;
+  margin-top: 30px;
+  padding-left: 30px;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--secondary-color);
+}
+
+/* Each education block */
+.timeline-item {
+  margin-bottom: 30px;
+  padding-left: 20px;
+  position: relative;
+}
+
+/* Dot on the line */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+}
+
+/* Year style */
+.timeline-year {
+  font-size: 14px;
+  color: var(--muted-text);
+}
+
+/* Degree title */
+.timeline-item h3 {
+  margin: 6px 0;
+}
