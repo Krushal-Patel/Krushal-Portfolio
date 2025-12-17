@@ -3,11 +3,42 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Krushal | Portfolio</title>
+    <title>Krushal Khunt | Web Developer & AIML Student</title>
+    <!-- ===== CSS Stylesheet ===== -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- ===== SEO Meta ===== -->
+    <meta name="description"
+        content="Krushal Khunt | AIML Student & Web Developer building clean, modern, and future-ready web experiences.">
+    <meta name="keywords" content="Krushal Khunt, Portfolio, Web Developer, AIML, JavaScript, HTML, CSS">
+    <meta name="author" content="Krushal Khunt">
+
+    <!-- ===== Responsive ===== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Open Graph (LinkedIn / GitHub Preview) ===== -->
+    <meta property="og:title" content="Krushal | Portfolio">
+    <meta property="og:description" content="Clean, modern and animated portfolio built with HTML, CSS and JavaScript.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kk-portfolio.pages.dev">
+    <meta property="og:image" content="https://kk-portfolio.pages.dev/preview.png">
+
+    <!-- ===== Twitter Preview ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+
+
+
 </head>
 
+
 <body>
+    <!-- Cursor Glow -->
+    <div id="cursor-glow"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+
+
     <!-- =====  Navbar ===== -->
 
     <nav class="navbar">
@@ -19,6 +50,7 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+
     </nav>
 
 
@@ -29,8 +61,9 @@
         </h1>
 
         <p class="subtitle">
-            I build clean, practical, and future-ready web experiences.
+            <span id="typing-text"></span>
         </p>
+
     </header>
 
 
@@ -189,7 +222,8 @@
         </p>
     </footer>
 
-
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
