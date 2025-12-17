@@ -4,226 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Krushal Khunt | Web Developer & AIML Student</title>
-    <!-- ===== CSS Stylesheet ===== -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- ===== SEO Meta ===== -->
-    <meta name="description"
-        content="Krushal Khunt | AIML Student & Web Developer building clean, modern, and future-ready web experiences.">
-    <meta name="keywords" content="Krushal Khunt, Portfolio, Web Developer, AIML, JavaScript, HTML, CSS">
-    <meta name="author" content="Krushal Khunt">
-
-    <!-- ===== Responsive ===== -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- ===== Open Graph (LinkedIn / GitHub Preview) ===== -->
-    <meta property="og:title" content="Krushal | Portfolio">
-    <meta property="og:description" content="Clean, modern and animated portfolio built with HTML, CSS and JavaScript.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kk-portfolio.pages.dev">
-    <meta property="og:image" content="https://kk-portfolio.pages.dev/preview.png">
-
-    <!-- ===== Twitter Preview ===== -->
-    <meta name="twitter:card" content="summary_large_image">
-
-
-
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
-
 <body>
-    <!-- Cursor Glow -->
+
     <div id="cursor-glow"></div>
-
-    <!-- Scroll Progress Bar -->
     <div id="scroll-progress"></div>
-
-
-
-    <!-- =====  Navbar ===== -->
 
     <nav class="navbar">
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/skills.html">Skills</a></li>
+            <li><a href="/pages/education.html">Education</a></li>
+            <li><a href="/pages/projects.html">Projects</a></li>
+            <li><a href="/pages/contact.html">Contact</a></li>
+            <li><a href="/pages/experience.html">Experience</a></li>
 
+        </ul>
     </nav>
 
-
-    <!-- ===== Hero / Home Section ===== -->
     <header id="home">
-        <h1>
-            Hi, I’m <span class="highlight">Krushal</span>
-        </h1>
-
-        <p class="subtitle">
-            <span id="typing-text"></span>
-        </p>
-
+        <h1>Hi, I’m <span class="highlight">Krushal</span></h1>
+        <p class="subtitle"><span id="typing-text"></span></p>
     </header>
 
-
-    <!-- ===== About ===== -->
-    <section id="about">
-        <h2>About Me</h2>
+    <section>
+        <h2>Welcome</h2>
         <p>
-            I am a B.Tech AIML student with an interest in AI, Machine Learning,
-            and Web Development. I enjoy learning new technologies and building projects.
+            This portfolio showcases my journey as a Web Developer and AIML student,
+            built with clean code, animations, and real-world practices.
         </p>
     </section>
 
-    <!-- ===== Skills Section ===== -->
-    <section id="skills">
-        <h2>Skills</h2>
-
-        <!-- Skills list container -->
-        <div class="skills-list">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>Python</span>
-            <span>Git & GitHub</span>
-        </div>
-    </section>
-
-
-    <!-- ===== Education Section ===== -->
-    <section id="education">
-        <h2>Education</h2>
-
-        <!-- Timeline container -->
-        <div class="timeline">
-
-            <!-- Single timeline item -->
-            <div class="timeline-item">
-                <span class="timeline-year">2023 – Present</span>
-                <h3>B.Tech in Artificial Intelligence & Machine Learning</h3>
-                <p>LJ University</p>
-            </div>
-
-            <!-- Single timeline item -->
-            <div class="timeline-item">
-                <span class="timeline-year">2020 – 2023</span>
-                <h3>Diploma in Computer Engineering</h3>
-                <p>OM Engineering College</p>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- ===== Projects Section ===== -->
-    <section id="projects">
-        <h2>Projects</h2>
-
-        <!-- Projects wrapper -->
-        <div class="projects">
-
-            <!-- ===== Single Project Card ===== -->
-            <div class="project-card">
-                <h3>Personal Portfolio Website</h3>
-
-                <!-- Problem -->
-                <p class="project-label">Problem</p>
-                <p>
-                    Needed a clean and professional online presence to showcase skills
-                    and projects without using heavy templates.
-                </p>
-
-                <!-- Solution -->
-                <p class="project-label">Solution</p>
-                <p>
-                    Designed and developed a custom portfolio using HTML, CSS, and JavaScript
-                    with a modern layout and clear structure.
-                </p>
-
-                <!-- Impact -->
-                <p class="project-label">Impact</p>
-                <p>
-                    Improved personal branding and created a strong first impression
-                    for recruiters and collaborators.
-                </p>
-
-                <!-- Tech stack -->
-                <p class="project-tech">
-                    <strong>Tech:</strong> HTML, CSS, JavaScript
-                </p>
-            </div>
-
-            <!-- ===== Future Project Card ===== -->
-            <div class="project-card">
-                <h3>Upcoming AI/ML Project</h3>
-
-                <p class="project-label">Problem</p>
-                <p>
-                    Manual analysis of data is time-consuming and error-prone.
-                </p>
-
-                <p class="project-label">Solution</p>
-                <p>
-                    Build an ML-based system to automate predictions and insights.
-                </p>
-
-                <p class="project-label">Impact</p>
-                <p>
-                    Faster decision-making and improved accuracy.
-                </p>
-
-                <p class="project-tech">
-                    <strong>Tech:</strong> Python, Machine Learning
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-
-
-    <!-- ===== Contact Section ===== -->
-    <section id="contact">
-        <h2>Contact</h2>
-
-        <!-- Short human message -->
-        <p class="contact-text">
-            I’m always open to discussing new opportunities, projects, or ideas.
-            If you think we can build something meaningful together, feel free to reach out.
+    <section>
+        <h2>What I Do</h2>
+        <p>
+            I focus on building clean, responsive, and user-friendly web interfaces.
+            Alongside web development, I’m learning Artificial Intelligence and
+            Machine Learning to solve real-world problems using data.
         </p>
+    </section>
 
-        <!-- Contact methods -->
-        <div class="contact-links">
-
-            <!-- Email -->
-            <a href="mailto:your-email@gmail.com" class="contact-item">
-                Email Me
-            </a>
-
-            <!-- GitHub -->
-            <a href="https://github.com/Krushal-Patel" target="_blank" class="contact-item">
-                GitHub
-            </a>
-
-            <!-- LinkedIn -->
-            <a href="#" target="_blank" class="contact-item">
-                LinkedIn
-            </a>
-
-        </div>
+    <section>
+        <h2>Current Focus</h2>
+        <ul>
+            <li>Improving frontend performance and UI/UX</li>
+            <li>Building real projects instead of only demos</li>
+            <li>Strengthening core programming fundamentals</li>
+        </ul>
     </section>
 
 
-    <!-- ===== Footer ===== -->
     <footer class="footer">
-        <p>
-            © 2025 Krushal Khunt • Built with focus, not templates
-        </p>
+        © 2025 Krushal Khunt • Built with focus, not templates
     </footer>
 
-    <!-- Main JavaScript -->
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/navbar.js"></script>
+<script type="module" src="/assets/js/main.js"></script>
+
 </body>
 
 </html>

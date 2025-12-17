@@ -93,28 +93,35 @@ p, li {
   color: var(--secondary-color);
 }
 
-/* ===============================
-   HERO / HOME SECTION
-================================ */
+/* ===== HERO UPGRADE ===== */
 #home {
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 10%;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(circle at top, #0a2540 0%, #020617 60%);
+  color: white;
 }
 
-.highlight {
-  color: var(--secondary-color);
+#home h1 {
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+#home .highlight {
+  color: #38bdf8;
+  text-shadow: 0 0 20px rgba(56,189,248,0.4);
 }
 
 .subtitle {
-  font-size: 18px;
-  color: var(--muted-text);
-  max-width: 600px;
+  margin-top: 16px;
+  font-size: 20px;
+  color: #cbd5e1;
 }
+
 
 /* ===============================
    SKILLS SECTION
@@ -264,10 +271,15 @@ p, li {
     font-size: 16px;
   }
 
-  /* Section padding */
   section {
-    padding: 40px 6%;
-  }
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 80px 10%;
+  margin: 80px auto;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+}
+
 
   /* Contact buttons */
   .contact-links {
@@ -396,3 +408,282 @@ p, li {
   z-index: 999;
 }
 
+/* =================================================
+   PHASE 6: GLOBAL PREMIUM POLISH (NO BREAKING)
+================================================= */
+
+/* Smooth overall feel */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Slight page depth */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(0,119,255,0.06), transparent 40%),
+    radial-gradient(circle at 80% 90%, rgba(56,189,248,0.05), transparent 40%);
+  z-index: -1;
+}
+
+/* =================================================
+   PHASE 7: NAVBAR — PREMIUM FLOATING LOOK
+================================================= */
+
+.navbar {
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.75);
+}
+
+.navbar ul li {
+  position: relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: var(--secondary-color);
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* =================================================
+   PHASE 8: HERO — DEPTH + SOFT MOTION
+================================================= */
+
+#home {
+  overflow: hidden;
+}
+
+#home::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, rgba(56,189,248,0.08), transparent 60%);
+  pointer-events: none;
+}
+
+#home h1 {
+  animation: heroFade 1.2s ease forwards;
+}
+
+@keyframes heroFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =================================================
+   PHASE 9: SECTION HEADINGS — STORY FEEL
+================================================= */
+
+section h2 {
+  position: relative;
+  padding-left: 14px;
+}
+
+section h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 4px;
+  height: 70%;
+  background: linear-gradient(
+    to bottom,
+    var(--secondary-color),
+    transparent
+  );
+  border-radius: 2px;
+}
+
+/* =================================================
+   PHASE 10: SKILLS — MICRO INTERACTION
+================================================= */
+
+.skills-list span {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skills-list span:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* =================================================
+   PHASE 11: PROJECT CARDS — PREMIUM LAYER
+================================================= */
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(56,189,248,0.12),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+/* =================================================
+   PHASE 12: CONTACT BUTTONS — CTA FEEL
+================================================= */
+
+.contact-item {
+  transition: all 0.25s ease;
+}
+
+.contact-item:hover {
+  box-shadow: 0 12px 24px rgba(0,119,255,0.25);
+}
+
+/* =================================================
+   PHASE 13: FOOTER — CLEAN FINISH
+================================================= */
+
+.footer {
+  border-top: 1px solid rgba(0,0,0,0.06);
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(6px);
+}
+
+
+.page-header {
+  padding: 120px 10% 60px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 48px;
+}
+
+.page-subtitle {
+  margin-top: 10px;
+  color: var(--muted-text);
+  font-size: 18px;
+}
+
+/* ===============================
+   MOBILE HAMBURGER NAVBAR
+================================ */
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: auto;
+  padding: 16px 10%;
+}
+
+.nav-logo a {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--dark-text);
+  font-size: 20px;
+}
+
+/* Hamburger icon */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 26px;
+  height: 3px;
+  background: var(--dark-text);
+  border-radius: 2px;
+}
+
+/* Desktop menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 12px 0;
+  }
+}
+
+/* ===============================
+   PAGE TRANSITION EFFECT
+================================ */
+
+/* Page wrapper animation */
+body {
+  animation: pageFadeIn 0.5s ease;
+}
+
+/* Fade-in on load */
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-out before navigation */
+.page-exit {
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
