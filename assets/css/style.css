@@ -186,3 +186,27 @@ section {
 .timeline-item h3 {
   margin: 6px 0;
 }
+
+/* ===== Projects (Story-Based Cards) ===== */
+.project-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Small section labels like Problem / Solution */
+.project-label {
+  margin-top: 14px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* Tech stack text */
+.project-tech {
+  margin-top: 16px;
+  color: var(--muted-text);
+}
