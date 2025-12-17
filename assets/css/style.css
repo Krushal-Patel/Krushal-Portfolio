@@ -210,3 +210,42 @@ section {
   margin-top: 16px;
   color: var(--muted-text);
 }
+
+/* ===== Contact Section ===== */
+.contact-text {
+  max-width: 600px;
+  color: var(--muted-text);
+  margin-bottom: 30px;
+}
+
+/* Contact links container */
+.contact-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Single contact button */
+.contact-item {
+  padding: 12px 20px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 30px;
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 500;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect (simple, not flashy) */
+.contact-item:hover {
+  background: var(--secondary-color);
+  color: #ffffff;
+}
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  padding: 30px 10%;
+  color: var(--muted-text);
+  font-size: 14px;
+}
