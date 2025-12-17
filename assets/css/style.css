@@ -88,3 +88,53 @@ p, li {
 .project-card h3 {
   margin-bottom: 10px;
 }
+
+
+/* ===== Global Theme Variables ===== */
+:root {
+  --primary-color: #0a2540;      /* Deep blue (premium feel) */
+  --secondary-color: #0077ff;    /* Accent blue */
+  --light-bg: #f9fbff;           /* Soft background */
+  --dark-text: #0f172a;          /* Main text */
+  --muted-text: #64748b;         /* Light text */
+}
+
+/* ===== Global Body Style ===== */
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  line-height: 1.7;
+}
+
+/* ===== Hero Section ===== */
+#home {
+  min-height: 80vh;                 /* screen ka major part */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10%;
+}
+
+#home h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.highlight {
+  color: var(--secondary-color);    /* brand accent */
+}
+
+.subtitle {
+  font-size: 18px;
+  color: var(--muted-text);
+  max-width: 600px;
+}
+
+/* ===== Section Card Look ===== */
+section {
+  background: #ffffff;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
