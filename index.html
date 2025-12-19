@@ -6,6 +6,8 @@
     <title>Krushal Khunt | Web Developer & AIML Student</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
+
+
 </head>
 
 <body>
@@ -14,7 +16,10 @@
     <div id="scroll-progress"></div>
 
     <nav class="navbar">
+
         <ul>
+            <!-- Home Logo -->
+
             <li><a href="/" class="active">Home</a></li>
             <li><a href="/pages/about.html">About</a></li>
             <li><a href="/pages/skills.html">Skills</a></li>
@@ -26,10 +31,32 @@
         </ul>
     </nav>
 
+
     <header id="home">
-        <h1>Hi, I’m <span class="highlight">Krushal</span></h1>
-        <p class="subtitle"><span id="typing-text"></span></p>
+        <!-- Waves (same as before) -->
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+
+        <!-- Hero Content Wrapper -->
+        <div class="hero-container">
+
+            <!-- LEFT TEXT -->
+            <div class="hero-text">
+                <h1>Hi, I’m <span class="highlight">Krushal</span></h1>
+
+
+                <p class="subtitle"><span id="typing-text"></span></p>
+            </div>
+
+            <!-- RIGHT PHOTO -->
+            <div class="hero-photo">
+                <img src="/assets/images/profile.jpeg" alt="Krushal Khunt">
+            </div>
+
+        </div>
     </header>
+
 
     <section>
         <h2>Welcome</h2>
@@ -39,23 +66,92 @@
         </p>
     </section>
 
-    <section>
-        <h2>What I Do</h2>
-        <p>
-            I focus on building clean, responsive, and user-friendly web interfaces.
-            Alongside web development, I’m learning Artificial Intelligence and
-            Machine Learning to solve real-world problems using data.
-        </p>
-    </section>
 
-    <section>
-        <h2>Current Focus</h2>
-        <ul>
-            <li>Improving frontend performance and UI/UX</li>
-            <li>Building real projects instead of only demos</li>
-            <li>Strengthening core programming fundamentals</li>
-        </ul>
-    </section>
+
+    <!-- ===== Home Preview Grid ===== -->
+    <div class="home-grid">
+
+        <!-- Education Preview -->
+        <section>
+            <h2>Education</h2>
+            <p>
+                Currently pursuing B.Tech in Artificial Intelligence & Machine Learning,
+                with a strong foundation in computer engineering.
+            </p>
+            <a href="/pages/education.html" class="contact-item" style="margin-top:20px;display:inline-block;">
+                View Full Education →
+            </a>
+        </section>
+
+        <!-- Skills Preview -->
+        <section>
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Python</span>
+                <span>Machine Learning</span>
+            </div>
+            <a href="/pages/skills.html" class="contact-item" style="margin-top:20px;display:inline-block;">
+                View All Skills →
+            </a>
+        </section>
+
+        <!-- Experience Preview -->
+        <section>
+            <h2>Experience</h2>
+            <p>
+                Hands-on experience through academic projects, self-driven learning,
+                and practical implementation of web and AI concepts.
+            </p>
+            <a href="/pages/experience.html" class="contact-item" style="margin-top:20px;display:inline-block;">
+                View Experience →
+            </a>
+        </section>
+
+        <!-- Featured Projects -->
+        <section>
+            <h2>Featured Projects</h2>
+            <p>
+                A selection of projects focused on clean design,
+                problem-solving, and real-world implementation.
+            </p>
+            <a href="/pages/projects.html" class="contact-item" style="margin-top:20px;display:inline-block;">
+                View Projects →
+            </a>
+        </section>
+
+        <section>
+            <h2>What I Do</h2>
+            <p>
+                I focus on building clean, responsive, and user-friendly web interfaces.
+                Alongside web development, I’m learning Artificial Intelligence and
+                Machine Learning to solve real-world problems using data.
+            </p>
+        </section>
+
+        <section>
+            <h2>Resume</h2>
+            <p>
+                A detailed overview of my education, skills, projects,
+                and technical journey in one document.
+            </p>
+
+            <a href="/assets/resume/Resume.pdf" target="_blank" class="contact-item"
+                style="margin-top:20px;display:inline-block;">
+                View Resume →
+            </a>
+        </section>
+
+    </div>
+
+
+
+
+
+
+
 
 
     <footer class="footer">
@@ -63,7 +159,7 @@
     </footer>
 
     <script src="/assets/js/navbar.js"></script>
-<script type="module" src="/assets/js/main.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
 
 </body>
 

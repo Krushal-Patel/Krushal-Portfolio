@@ -11,47 +11,82 @@
 <body>
     <!-- Navbar Placeholder -->
     <div id="navbar-container"></div>
+ <!-- Cursor Glow -->
+  <div id="cursor-glow"></div>
 
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+
+  <body class="inner-page">
 
     <header class="page-header">
-        <h1>Education</h1>
-        <p class="page-subtitle">
-            My academic journey so far
-        </p>
-    </header>
+  <h1>Education</h1>
+  <p class="page-subtitle">
+    My academic journey so far
+  </p>
+</header>
 
-    <section>
-        <div class="timeline">
-            <div class="timeline-item">
-                <span class="timeline-year">2023 – Present</span>
-                <h3>B.Tech in AIML</h3>
-                <p>LJ University</p>
-            </div>
+<!-- ===============================
+     TIMELINE (ALWAYS VISIBLE)
+================================ -->
+<section>
+  <div class="timeline">
 
-            <div class="timeline-item">
-                <span class="timeline-year">2020 – 2023</span>
-                <h3>Diploma in Computer Engineering</h3>
-                <p>OM Engineering College</p>
-            </div>
-        </div>
-    </section>
+    <div class="timeline-item">
+      <span class="timeline-year">2023 – Present</span>
+      <h3>B.Tech in Artificial Intelligence & Machine Learning</h3>
+      <p>LJ University</p>
+    </div>
 
-    <section>
-        <h2>Academic Journey</h2>
-        <p>
-            My education has helped me understand both theoretical concepts and
-            practical implementation. Each phase added clarity to my career direction.
-        </p>
-    </section>
+    <div class="timeline-item">
+      <span class="timeline-year">2020 – 2023</span>
+      <h3>Diploma in Computer Engineering</h3>
+      <p>OM Engineering College</p>
+    </div>
 
-    <section>
-        <h2>Key Learnings</h2>
-        <ul>
-            <li>Strong fundamentals in programming and logic</li>
-            <li>Understanding of data structures and algorithms basics</li>
-            <li>Introduction to AI and Machine Learning concepts</li>
-        </ul>
-    </section>
+  </div>
+</section>
+
+<!-- ===============================
+     DETAILS (ACCORDION)
+================================ -->
+<section class="accordion">
+
+  <!-- Academic Journey -->
+  <div class="accordion-item">
+    <button class="accordion-header">
+      <span>Academic Journey</span>
+      <img src="/assets/icons/add.png" class="accordion-icon">
+    </button>
+
+    <div class="accordion-content">
+      <p>
+        My education has helped me understand both theoretical concepts and
+        practical implementation. Each academic phase strengthened my
+        technical foundation and clarified my career direction.
+      </p>
+    </div>
+  </div>
+
+  <!-- Key Learnings -->
+  <div class="accordion-item">
+    <button class="accordion-header">
+      <span>Key Learnings</span>
+      <img src="/assets/icons/add.png" class="accordion-icon">
+    </button>
+
+    <div class="accordion-content">
+      <ul>
+        <li>Strong fundamentals in programming and logical thinking</li>
+        <li>Basic understanding of data structures and algorithms</li>
+        <li>Introduction to Artificial Intelligence and Machine Learning concepts</li>
+        <li>Hands-on exposure through academic projects</li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
     <!-- Footer Placeholder -->
     <div id="footer-container"></div>
 

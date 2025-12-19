@@ -11,77 +11,114 @@
 <body>
     <!-- Navbar Placeholder -->
     <div id="navbar-container"></div>
+    <!-- Cursor Glow -->
+    <div id="cursor-glow"></div>
+
+    <!-- Scroll Progress -->
+    <div id="scroll-progress"></div>
+
+    <body class="inner-page">
 
 
 
-    <header class="page-header">
-        <h1>About Me</h1>
-        <p class="page-subtitle">
-            My background, mindset, and what drives me forward
-        </p>
-    </header>
+        <header class="page-header">
+            <h1>About Me</h1>
+            <p class="page-subtitle">
+                My background, mindset, and what drives me forward
+            </p>
+        </header>
 
-    <section>
-        <h2>Who I Am</h2>
-        <p>
-            I’m Krushal Khunt, a B.Tech AIML student with a strong interest in
-            web development and problem-solving through technology.
-        </p>
-    </section>
+        <section>
+            <h2>Who I Am</h2>
+            <p>
+                I’m Krushal Khunt, a B.Tech AIML student with a strong interest in
+                web development and problem-solving through technology.
+            </p>
+        </section>
 
-    <section>
-        <h2>How I Think</h2>
-        <p>
-            I believe in learning by building. Instead of just reading theory,
-            I prefer creating projects that push my understanding further.
-        </p>
-    </section>
+        <section>
+            <h2>How I Think</h2>
+            <p>
+                I believe in learning by building. Instead of just reading theory,
+                I prefer creating projects that push my understanding further.
+            </p>
+        </section>
 
-    <section>
-        <h2>My Direction</h2>
-        <p>
-            My goal is to become a skilled developer who can design, build,
-            and improve real-world digital products.
-        </p>
-    </section>
-
-    <section>
-        <h2>My Background</h2>
-        <p>
-            I started my journey with a Diploma in Computer Engineering, where I built
-            a strong foundation in programming and system concepts. Currently, I am
-            pursuing B.Tech in AIML to deepen my understanding of intelligent systems.
-        </p>
-    </section>
-
-    <section>
-        <h2>How I Learn</h2>
-        <p>
-            I believe learning is most effective when applied. Instead of only
-            memorizing concepts, I prefer building projects, experimenting with ideas,
-            and fixing my own mistakes.
-        </p>
-    </section>
-
-    <section>
-        <h2>What Drives Me</h2>
-        <p>
-            I enjoy turning ideas into working solutions. Whether it’s a simple website
-            or a complex logic problem, the process of building and improving motivates me.
-        </p>
-    </section>  
-
-    <!-- Footer Placeholder -->
-    <div id="footer-container"></div>
+        <section class="accordion" style="margin-bottom: 50px;">
 
 
+            <!-- My Direction -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>My Direction</span>
+                    <img src="/assets/icons/add.png" class="accordion-icon">
+                </button>
+                <div class="accordion-content">
+                    <p>
+                        My goal is to become a skilled developer who can design, build,
+                        and improve real-world digital products.
+                    </p>
+                </div>
+            </div>
 
-    <script src="/assets/js/navbar.js"></script>
-<script src="/assets/js/footer.js"></script>
-<script type="module" src="/assets/js/main.js"></script>
+            <!-- My Background -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>My Background</span>
+                    <img src="/assets/icons/add.png" class="accordion-icon">
+                </button>
+                <div class="accordion-content">
+                    <p>
+                        I started my journey with a Diploma in Computer Engineering, where I built
+                        a strong foundation in programming and system concepts. Currently, I am
+                        pursuing B.Tech in AIML to deepen my understanding of intelligent systems.
+                    </p>
+                </div>
+            </div>
+
+            <!-- How I Learn -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>How I Learn</span>
+                    <img src="/assets/icons/add.png" class="accordion-icon">
+                </button>
+                <div class="accordion-content">
+                    <p>
+                        I believe learning is most effective when applied. Instead of only
+                        memorizing concepts, I prefer building projects, experimenting with ideas,
+                        and fixing my own mistakes.
+                    </p>
+                </div>
+            </div>
+
+            <!-- What Drives Me -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>What Drives Me</span>
+                    <img src="/assets/icons/add.png" class="accordion-icon">
+                </button>
+                <div class="accordion-content">
+                    <p>
+                        I enjoy turning ideas into working solutions. Whether it’s a simple website
+                        or a complex logic problem, the process of building and improving motivates me.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Footer Placeholder -->
+        <div id="footer-container"></div>
 
 
 
-</body>
+        <script src="/assets/js/navbar.js"></script>
+        <script src="/assets/js/footer.js"></script>
+        <script type="module" src="/assets/js/main.js"></script>
+
+
+
+    </body>
 
 </html>

@@ -45,7 +45,7 @@ section {
 ================================ */
 h1 {
   font-size: 48px;
-  margin-bottom: 16px;
+  margin-bottom: 26px;
 }
 
 h2 {
@@ -101,7 +101,7 @@ p, li {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: radial-gradient(circle at top, #0a2540 0%, #020617 60%);
+  
   color: white;
 }
 
@@ -112,7 +112,7 @@ p, li {
 }
 
 #home .highlight {
-  color: #38bdf8;
+  color: #000000;
   text-shadow: 0 0 20px rgba(56,189,248,0.4);
 }
 
@@ -120,8 +120,16 @@ p, li {
   margin-top: 16px;
   font-size: 20px;
   color: #cbd5e1;
+  min-height: 28px;        /* 🔥 space reserve */
+  display: block;
 }
 
+/* mobile me thoda zyada height */
+@media (max-width: 768px) {
+  .subtitle {
+    min-height: 48px;
+  }
+}
 
 /* ===============================
    SKILLS SECTION
@@ -233,6 +241,7 @@ p, li {
   text-decoration: none;
   color: var(--secondary-color);
   font-weight: 500;
+  
 }
 
 .contact-item:hover {
@@ -267,9 +276,6 @@ p, li {
     font-size: 34px;
   }
 
-  .subtitle {
-    font-size: 16px;
-  }
 
   section {
   background: rgba(255,255,255,0.75);
@@ -552,18 +558,6 @@ section h2::before {
 }
 
 /* =================================================
-   PHASE 12: CONTACT BUTTONS — CTA FEEL
-================================================= */
-
-.contact-item {
-  transition: all 0.25s ease;
-}
-
-.contact-item:hover {
-  box-shadow: 0 12px 24px rgba(0,119,255,0.25);
-}
-
-/* =================================================
    PHASE 13: FOOTER — CLEAN FINISH
 ================================================= */
 
@@ -687,3 +681,448 @@ body {
   transform: translateY(-6px);
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
+
+
+/* ===============================
+   HOME PAGE GRID (ONLY HOME)
+================================ */
+
+/* grid wrapper */
+.home-grid {
+  max-width: 1100px;
+  margin: 120px auto;
+  padding: 0 10%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+}
+
+/* home grid section tweak */
+.home-grid section {
+  margin: 0;               /* global margin override */
+}
+
+
+
+/* mobile: single column */
+@media (max-width: 768px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+
+/* ===============================
+   HOME GRID – CARD SIZE FIX
+================================ */
+
+/* home grid cards ko real card feel */
+.home-grid section {
+  padding: 60px 48px 50px 50px;              /* 🔥 size increase */
+  min-height: 260px;               /* cards ko height mile */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /* content balanced */
+}
+
+/* headings thode strong */
+.home-grid h2 {
+  font-size: 30px;
+}
+
+/* paragraph readable width */
+.home-grid p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* CTA button spacing */
+.home-grid .contact-item {
+  margin-top: 24px;
+  align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+  .home-grid section {
+    padding: 40px 28px;
+    min-height: auto;
+  }
+}
+
+
+/* ===============================
+   HOME PAGE LOGO (HERO)
+================================ */
+
+.home-logo {
+  width: 72px;
+  height: auto;
+  margin-bottom: 24px;
+  opacity: 0.95;
+}
+
+/* mobile adjust */
+@media (max-width: 768px) {
+  .home-logo {
+    width: 56px;
+    margin-bottom: 20px;
+  }
+}
+
+
+    #home{
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
+    background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+
+/* =========================================
+   INNER PAGES – LIGHT BACKGROUND (+10%)
+========================================= */
+
+.inner-page {
+  background: linear-gradient(
+    135deg,
+    #f1f5f9,   /* light grey-blue */
+    #e8f2f4,   /* soft cyan hint */
+    #dff1f2,   /* teal tint (+10%) */
+    #f1f5f9
+  );
+
+  background-size: 300% 300%;
+  animation: lightGradient 40s ease infinite;
+}
+
+
+/* Subtle animation */
+@keyframes innerGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.inner-page section {
+  background: rgba(255, 255, 255, 0.92);
+}
+
+
+
+/* =========================================
+   HERO FINAL LAYOUT (TEXT LEFT + PHOTO RIGHT)
+========================================= */
+
+
+/* container */
+.hero-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* 🔥 weight balance */
+  align-items: center;
+  gap: 265px;
+  z-index: 1;
+}
+
+/* RIGHT PHOTO */
+.hero-photo {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-photo img {
+  width: 450px;
+  height: auto;
+  border-radius: 18px;
+  border: 2px solid rgba(56,189,248,0.35);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+  .hero-photo img {
+    width: 240px;
+  }
+}
+
+/* LEFT TEXT */
+.hero-text {
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 64px;
+  line-height: 1.1;
+}
+
+.hero-text .subtitle {
+  font-size: 20px;
+  color: #e0f2fe;
+}
+
+/* ===============================
+   ACCORDION – ABOUT PAGE
+================================ */
+
+.accordion {
+  max-width: 900px;
+  margin: auto;
+}
+
+.accordion-item {
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.accordion-header {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 22px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--dark-text);
+}
+
+.accordion-icon {
+  width: 18px;
+  transition: transform 0.3s ease;
+  opacity: 0.7;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(180deg);
+}
+
+/* ===============================
+   PROJECT CASE STUDY TOGGLE
+================================ */
+
+.case-study {
+  display: none;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(0,0,0,0.15);
+  color: var(--muted-text);
+}
+
+.project-card.active .case-study {
+  display: block;
+}
+
+.wave {
+  pointer-events: none;
+}
+
+#home::after {
+  pointer-events: none;
+}
+
+#cursor-glow {
+  pointer-events: none;
+}
+.toggle-case {
+  position: relative;
+  z-index: 10;
+}
+
+#cursor-glow,
+.wave {
+  pointer-events: none !important;
+}
+
+.contact-item{
+  margin: 5px;
+}
+
+/* ===============================
+   EMAIL REASON MODAL – PREMIUM
+================================ */
+
+.mail-reason-box {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 20, 40, 0.55);
+  backdrop-filter: blur(10px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.mail-reason-box.active {
+  display: flex;
+}
+
+/* Modal card */
+.mail-box {
+  background: rgba(255,255,255,0.96);
+  padding: 36px 32px 30px;
+  border-radius: 18px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 40px 90px rgba(0,0,0,0.35);
+  animation: mailPop 0.35s ease;
+}
+
+/* Title */
+.mail-box h3 {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+/* Subtitle */
+.mail-box p {
+  font-size: 15px;
+  color: var(--muted-text);
+  margin-bottom: 28px;
+}
+
+/* Buttons layout */
+.mail-box button {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.mail-box button:hover {
+  background: var(--secondary-color);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0,119,255,0.35);
+}
+
+/* Cancel */
+#mail-cancel {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+#mail-cancel:hover {
+  color: #010101;
+  background: #ed2424;
+}
+
+/* Animation */
+@keyframes mailPop {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+

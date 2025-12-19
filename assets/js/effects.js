@@ -2,10 +2,13 @@
 const typingEl = document.getElementById("typing-text");
 if (typingEl) {
   const texts = [
-    "I build modern web experiences.",
-    "Focused on clean design.",
-    "Learning every day."
+    "Web Developer with simple fundamentals in Python | Django | ML.",
+    "Exploring DevOps, Cloud Computing, and scalable systems.",
+    "Interested in Computer Networks & backend architecture.",
+    "Learning how real-world systems work, not just tools.",
+    "Focused on clean design, performance, and problem-solving."
   ];
+
 
   let t = 0, c = 0;
 

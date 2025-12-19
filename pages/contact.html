@@ -13,53 +13,90 @@
     <!-- Navbar Placeholder -->
     <div id="navbar-container"></div>
 
+    <!-- Cursor Glow -->
+    <div id="cursor-glow"></div>
 
-    <header class="page-header">
-        <h1>Contact</h1>
-        <p class="page-subtitle">
-            Let’s connect and collaborate
-        </p>
-    </header>
+    <body class="inner-page">
 
-    <section>
-        <p class="contact-text">
-            I’m open to internships, learning opportunities,
-            and meaningful discussions.
-        </p>
 
-        <div class="contact-links">
-            <a href="mailto:your-email@gmail.com" class="contact-item">Email</a>
-            <a href="https://github.com/Krushal-Patel" class="contact-item" target="_blank">GitHub</a>
-            <a href="#" class="contact-item" target="_blank">LinkedIn</a>
+        <!-- Scroll Progress -->
+        <div id="scroll-progress"></div>
+        <header class="page-header">
+            <h1>Contact</h1>
+            <p class="page-subtitle">
+                Let’s connect and collaborate
+            </p>
+        </header>
+
+        <section>
+            <p class="contact-text">
+                I’m open to internships, learning opportunities,
+                and meaningful discussions.
+            </p>
+            <div id="links">
+                <!-- <a href="mailto:krushalp52@gmail.com?subject={email-modal}"
+                    onclick="window.location.href=this.href; return false;" class="contact-item">
+                    Email Me
+                </a> -->
+
+                <a href="#" id="email-btn" class="contact-item">
+                    📧 Email Me
+                </a>
+
+
+
+
+
+                <a href="https://github.com/Krushal-Patel" class="contact-item" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/krushal-khunt-211570363" class="contact-item"
+                    target="_blank">LinkedIn</a>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>Why Reach Out?</h2>
+            <p>
+                Whether you want to discuss a project, share an idea, or explore
+                collaboration opportunities, I’m always open to meaningful conversations.
+            </p>
+        </section>
+
+        <section>
+            <h2>Availability</h2>
+            <p>
+                I am currently open to internships, learning opportunities,
+                and collaborative projects.
+            </p>
+        </section>
+        <!-- Footer Placeholder -->
+        <div id="footer-container"></div>
+
+
+
+
+        <script src="/assets/js/navbar.js"></script>
+        <script src="/assets/js/footer.js"></script>
+      
+
+        <div id="mail-reason-box" class="mail-reason-box">
+            <div class="mail-box">
+                <h3>Contact Krushal</h3>
+                <p>Select the reason</p>
+
+                <button data-type="internship">Internship Opportunity</button>
+                <button data-type="job">Job / Full-time Role</button>
+                <button data-type="project">Project / Collaboration</button>
+                <button data-type="other">Other</button>
+
+                <button id="mail-cancel">Cancel</button>
+            </div>
         </div>
-    </section>
 
-    <section>
-        <h2>Why Reach Out?</h2>
-        <p>
-            Whether you want to discuss a project, share an idea, or explore
-            collaboration opportunities, I’m always open to meaningful conversations.
-        </p>
-    </section>
-
-    <section>
-        <h2>Availability</h2>
-        <p>
-            I am currently open to internships, learning opportunities,
-            and collaborative projects.
-        </p>
-    </section>
-    <!-- Footer Placeholder -->
-    <div id="footer-container"></div>
+        <script type="module" src="/assets/js/main.js"></script>
 
 
 
-
-    <script src="/assets/js/navbar.js"></script>
-<script src="/assets/js/footer.js"></script>
-<script type="module" src="/assets/js/main.js"></script>
-
-
-</body>
+    </body>
 
 </html>
