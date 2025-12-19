@@ -13,71 +13,129 @@
     <!-- Navbar Placeholder -->
     <div id="navbar-container"></div>
 
-    <header class="page-header">
-        <h1>Projects</h1>
-        <p class="page-subtitle">
-            Things I’ve built while learning and experimenting
-        </p>
-    </header>
+    <!-- Cursor Glow -->
+    <div id="cursor-glow"></div>
 
-    <section>
-        <div class="projects">
-            <div class="project-card">
-                <h3>Personal Portfolio</h3>
-                <p>
-                    Designed and developed a fully responsive portfolio
-                    without using templates.
-                </p>
-                <p class="project-tech">
-                    <strong>Tech:</strong> HTML, CSS, JavaScript
-                </p>
-            </div>
+    <body class="inner-page">
 
-            <div class="project-card">
-                <h3>AI / ML Academic Project</h3>
-                <p>
-                    Applied machine learning concepts to solve a
-                    structured data problem.
-                </p>
-                <p class="project-tech">
-                    <strong>Tech:</strong> Python, ML
-                </p>
-            </div>
-        </div>
-    </section>
+        <!-- Scroll Progress -->
+        <div id="scroll-progress"></div>
 
-    <section>
-        <h2>My Approach to Projects</h2>
-        <p>
-            I treat every project as a learning opportunity. My goal is not just to
-            complete tasks, but to understand why a solution works and how it can be improved.
-        </p>
-    </section>
+        <header class="page-header">
+  <h1>Projects</h1>
+  <p class="page-subtitle">
+    Things I’ve built while learning and experimenting
+  </p>
+</header>
 
-    <section>
-        <h2>What I Learned from Projects</h2>
-        <ul>
-            <li>Planning before writing code saves time</li>
-            <li>Clean UI improves user experience</li>
-            <li>Debugging is a key part of development</li>
-        </ul>
-    </section>
+<!-- ===============================
+     PROJECT CARDS (SUMMARY)
+================================ -->
+<section>
+  <div class="projects" >
 
-    <a href="/pages/case-studies/portfolio.html" class="contact-item">
-  View Case Study
-</a>
+    <!-- Project 1 -->
+    <div class="project-card">
+      <h3>Personal Portfolio Website</h3>
+      <p>
+        Designed and developed a fully responsive portfolio
+        without using templates.
+      </p>
+      <p class="project-tech">
+        <strong>Tech:</strong> HTML, CSS, JavaScript
+      </p>
+
+      <div class="case-btn-wrap">
+        <button class="contact-item toggle-case">
+          View Case Study
+        </button>
+      </div>
+
+      <!-- Hidden Case Study -->
+      <div class="case-study">
+        <p><strong>Problem:</strong> Needed a clean, professional online presence.</p>
+        <p><strong>Solution:</strong> Built a custom UI with animations and reusable components.</p>
+        <p><strong>Outcome:</strong> Strong personal branding and better presentation of skills.</p>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <h3>AI / ML Academic Project</h3>
+      <p>
+        Applied machine learning concepts to solve a
+        structured data problem.
+      </p>
+      <p class="project-tech">
+        <strong>Tech:</strong> Python, Machine Learning
+      </p>
+
+      <div class="case-btn-wrap">
+        <button class="contact-item toggle-case">
+          View Case Study
+        </button>
+      </div>
+
+      <!-- Hidden Case Study -->
+      <div class="case-study">
+        <p><strong>Problem:</strong> Manual analysis was slow and inefficient.</p>
+        <p><strong>Solution:</strong> Used ML algorithms to automate predictions.</p>
+        <p><strong>Outcome:</strong> Faster insights and improved accuracy.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===============================
+     PROJECT THINKING (ACCORDION)
+================================ -->
+<section class="accordion" style="margin-bottom: 50px;">
+
+  <div class="accordion-item">
+    <button class="accordion-header">
+      <span>My Approach to Projects</span>
+      <img src="/assets/icons/add.png" class="accordion-icon">
+    </button>
+
+    <div class="accordion-content">
+      <p>
+        I treat every project as a learning opportunity. Instead of focusing
+        only on output, I analyze why a solution works and how it can be improved.
+      </p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-header">
+      <span>What I Learned from Projects</span>
+      <img src="/assets/icons/add.png" class="accordion-icon">
+    </button>
+
+    <div class="accordion-content">
+      <ul>
+        <li>Planning before coding saves development time</li>
+        <li>Clean UI directly improves user experience</li>
+        <li>Debugging builds deeper understanding</li>
+        <li>Small improvements compound over time</li>
+      </ul>
+    </div>
+  </div>
+
+</section>
 
 
-    <!-- Footer Placeholder -->
-    <div id="footer-container"></div>
+
+        <!-- Footer Placeholder -->
+        <div id="footer-container"></div>
 
 
 
-  <script src="/assets/js/navbar.js"></script>
-<script src="/assets/js/footer.js"></script>
-<script type="module" src="/assets/js/main.js"></script>
+        <script src="/assets/js/navbar.js"></script>
+        <script src="/assets/js/footer.js"></script>
+        <script type="module" src="/assets/js/main.js"></script>
 
 
-</body>
+    </body>
 
 </html>
