@@ -28,3 +28,28 @@ fetch("/components/navbar.html")
     });
   })
   .catch(err => console.error("Navbar load error", err));
+
+const toggle = document.getElementById("mobile-menu-toggle");
+const menu = document.getElementById("nav-links");
+const overlay = document.getElementById("nav-overlay");
+
+if (toggle && menu && overlay) {
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    overlay.classList.toggle("active");
+  });
+
+  overlay.addEventListener("click", () => {
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+
+  menu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+  });
+}
+
