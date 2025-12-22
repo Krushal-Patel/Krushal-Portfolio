@@ -269,7 +269,7 @@ p, li {
   .navbar ul {
     flex-direction: column;
     gap: 1px;
-    /* padding: 12px 6%; */
+    padding: 12px 6%;
   }
 
   /* Hero text */
@@ -1123,7 +1123,7 @@ html, body {
     position: fixed;
     top: 0;
     right: -100%;            /* 🔥 fully hidden */
-    width: 80%;
+    width: 60%;
     height: 100vh;
 
     display: flex;
