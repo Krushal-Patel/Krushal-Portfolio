@@ -1090,13 +1090,14 @@ body {
    MOBILE ICON
 ================================ */
 .nav-mobile {
-  display: block;
-  z-index: 4000;        /* 🔥 VERY IMPORTANT */
-  position: relative;
+  display: none;
 }
+
 @media (max-width: 768px) {
   .nav-mobile {
     display: block;
+    z-index: 4000;        /* 🔥 VERY IMPORTANT */
+  position: relative;
   }
 }
 .nav-icon-img {
@@ -1199,3 +1200,6 @@ html, body {
 .navbar {
   z-index: 3000;
 }
+
+/* Desktop default: icon hidden */
+
