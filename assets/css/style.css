@@ -1203,3 +1203,14 @@ html, body {
 
 /* Desktop default: icon hidden */
 
+@media (max-width: 768px) {
+
+  .hero-text {
+    width: 100%;
+    max-width: 360px;              /* 🔥 Samsung A35 safe */
+    margin: 0 auto;                /* 🔥 real center */
+    padding: 0 16px;               /* 🔥 equal left-right */
+    text-align: center;
+  }
+
+}
