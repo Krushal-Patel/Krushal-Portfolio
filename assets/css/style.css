@@ -268,7 +268,7 @@ p, li {
   /* Navbar mobile */
   .navbar ul {
     flex-direction: column;
-    gap: 1px;
+    gap: 5  px;
     padding: 12px 6%;
   }
 
