@@ -268,8 +268,8 @@ p, li {
   /* Navbar mobile */
   .navbar ul {
     flex-direction: column;
-    gap: 12px;
-    padding: 12px 6%;
+    gap: 1px;
+    /* padding: 12px 6%; */
   }
 
   /* Hero text */
@@ -608,7 +608,7 @@ section h2::before {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 
 
