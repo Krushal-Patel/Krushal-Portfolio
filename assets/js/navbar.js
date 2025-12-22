@@ -1,35 +1,30 @@
-// Navbar ko dynamically load karne ke liye
 fetch("/components/navbar.html")
-  .then(response => response.text())
-  .then(data => {
-    // navbar inject
-    document.getElementById("navbar-container").innerHTML = data;
+  .then(res => res.text())
+  .then(html => {
+    const container = document.getElementById("navbar-container");
+    if (!container) {
+      console.error("navbar-container not found");
+      return;
+    }
 
-    // active link set
-    const currentPath = window.location.pathname;
-    document.querySelectorAll(".navbar a").forEach(link => {
-      if (link.getAttribute("href") === currentPath) {
-        link.classList.add("active");
-      }
+    container.innerHTML = html;
+
+    const toggle = document.getElementById("mobile-menu-toggle");
+    const menu = document.getElementById("nav-links");
+
+    if (!toggle || !menu) {
+      console.error("toggle or menu missing");
+      return;
+    }
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+
+    menu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("active");
+      });
     });
   })
-  .catch(error => {
-    console.error("Navbar load error:", error);
-  });
-
-  // Mobile hamburger toggle
-document.addEventListener("click", e => {
-  const toggle = document.getElementById("nav-toggle");
-  const links = document.getElementById("nav-links");
-
-  if (!toggle || !links) return;
-
-  if (toggle.contains(e.target)) {
-    links.classList.toggle("active");
-  }
-
-  // close menu when link clicked
-  if (e.target.tagName === "A") {
-    links.classList.remove("active");
-  }
-});
+  .catch(err => console.error("Navbar load error", err));

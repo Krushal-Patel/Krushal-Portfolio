@@ -15,7 +15,7 @@ document.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", e => {
       e.preventDefault();
 
-      document.body.classList.add("page-exit");
+      document.body.classList.add("page-exit"); 
 
       setTimeout(() => {
         window.location.href = url;
@@ -166,3 +166,5 @@ if (type === "other") {
   });
 
 });
+
+
