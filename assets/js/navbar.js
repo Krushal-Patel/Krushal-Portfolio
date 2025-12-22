@@ -38,11 +38,15 @@ if (toggle && menu && overlay) {
   toggle.addEventListener("click", () => {
     menu.classList.toggle("active");
     overlay.classList.toggle("active");
+    document.body.style.overflow =
+     menu.classList.contains("active") ? "hidden" : "";
   });
 
   overlay.addEventListener("click", () => {
     menu.classList.remove("active");
     overlay.classList.remove("active");
+    document.body.style.overflow ="";
+    
   });
 
   menu.querySelectorAll("a").forEach(link => {
@@ -52,4 +56,5 @@ if (toggle && menu && overlay) {
     });
   });
 }
+
 
