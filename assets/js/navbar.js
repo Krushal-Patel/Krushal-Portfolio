@@ -2,59 +2,45 @@ fetch("/components/navbar.html")
   .then(res => res.text())
   .then(html => {
     const container = document.getElementById("navbar-container");
-    if (!container) {
-      console.error("navbar-container not found");
-      return;
-    }
+    if (!container) return;
 
     container.innerHTML = html;
 
     const toggle = document.getElementById("mobile-menu-toggle");
     const menu = document.getElementById("nav-links");
+    const overlay = document.getElementById("nav-overlay");
 
-    if (!toggle || !menu) {
-      console.error("toggle or menu missing");
-      return;
-    }
+    if (!toggle || !menu || !overlay) return;
 
+    /* ===============================
+       MENU TOGGLE (AS IT IS)
+    ================================ */
     toggle.addEventListener("click", () => {
-      menu.classList.toggle("active");
+      const open = menu.classList.toggle("active");
+      overlay.classList.toggle("active", open);
+      document.body.style.overflow = open ? "hidden" : "";
     });
 
+    /* ===============================
+       👉 NEW CONDITION: CLICK OUTSIDE
+    ================================ */
+    overlay.addEventListener("click", () => {
+      if (!menu.classList.contains("active")) return;
+
+      menu.classList.remove("active");
+      overlay.classList.remove("active");
+      document.body.style.overflow = "";
+    });
+
+    /* ===============================
+       LINK CLICK = CLOSE
+    ================================ */
     menu.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", () => {
         menu.classList.remove("active");
+        overlay.classList.remove("active");
+        document.body.style.overflow = "";
       });
     });
   })
   .catch(err => console.error("Navbar load error", err));
-
-const toggle = document.getElementById("mobile-menu-toggle");
-const menu = document.getElementById("nav-links");
-const overlay = document.getElementById("nav-overlay");
-
-if (toggle && menu && overlay) {
-
-  toggle.addEventListener("click", () => {
-    menu.classList.toggle("active");
-    overlay.classList.toggle("active");
-    document.body.style.overflow =
-     menu.classList.contains("active") ? "hidden" : "";
-  });
-
-  overlay.addEventListener("click", () => {
-    menu.classList.remove("active");
-    overlay.classList.remove("active");
-    document.body.style.overflow ="";
-    
-  });
-
-  menu.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      menu.classList.remove("active");
-      overlay.classList.remove("active");
-    });
-  });
-}
-
-

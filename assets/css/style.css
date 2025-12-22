@@ -1150,17 +1150,18 @@ html, body {
 .nav-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0, 0, 0, 0.4);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  z-index: 1000;
+  z-index: 1500;        /* nav-links se thoda niche */
 }
 
 .nav-overlay.active {
   opacity: 1;
-  pointer-events: auto;
+  pointer-events: auto; /* 🔥 click capture */
 }
+
 
 /* ===============================
    MOBILE CONTACT BUTTON FIX
