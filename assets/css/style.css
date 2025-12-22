@@ -1215,3 +1215,23 @@ html, body {
   }
 
 }
+
+.contact-item.whatsapp {
+  border-color: #25D366;
+  color: #25D366;
+}
+
+.contact-item.whatsapp:hover {
+  background: #25D366;
+  color: #fff;
+}
+
+.contact-item.call {
+  border-color: #0ea5e9;
+  color: #0ea5e9;
+}
+
+.contact-item.call:hover {
+  background: #0ea5e9;
+  color: #fff;
+}
