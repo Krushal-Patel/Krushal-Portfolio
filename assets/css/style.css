@@ -1124,7 +1124,7 @@ html, body {
     top: 0;
     right: -100%;            /* 🔥 fully hidden */
     width: 60%;
-    height: 85vh;
+    height: 65vh;
 
     display: flex;
     flex-direction: column;
