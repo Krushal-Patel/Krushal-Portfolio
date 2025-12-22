@@ -1135,3 +1135,80 @@ body {
   }
 }
 
+/* ===============================
+   MOBILE CONTACT BUTTON FIX
+================================ */
+@media (max-width: 768px) {
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;   /* 🔥 vertical stack */
+    gap: 14px;
+    align-items: stretch;     /* full width buttons */
+  }
+
+  .contact-item {
+    width: 100%;              /* 🔥 full width */
+    justify-content: center;
+    text-align: center;
+    padding: 14px 18px;
+    font-size: 16px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;                /* icon + text gap */
+  }
+
+  .contact-item img,
+  .contact-item svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* ===============================
+   HERO TEXT – MOBILE FINAL FIX
+   (NO SHIFT + MULTILINE SAFE)
+================================ */
+@media (max-width: 768px) {
+
+  .hero-text {
+    position: relative;
+    text-align: center;
+    padding: 0 18px;
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+
+  /* Actual animated text */
+  #typing-text {
+    max-width: 100%;
+    text-align: center;
+    line-height: 1.4;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* 🔒 FIXED HEIGHT WRAPPER (2 lines safe) */
+  .subtitle {
+    position: relative;
+    height: 72px;                /* 🔥 enough for 2 lines */
+    overflow: hidden;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;           /* 🔥 80% of device width */
+    margin-left: auto;
+    margin-right: auto;   /* 10% left + 10% right automatically */
+    text-align: center;
+  }
+
+}
+
+
+
