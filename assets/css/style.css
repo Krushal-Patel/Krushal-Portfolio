@@ -233,7 +233,7 @@ li {
    CONTACT SECTION
 ================================ */
 .contact-text {
-  max-width: 600px;
+  max-width: 786px;
   color: var(--muted-text);
   margin-bottom: 30px;
 }
@@ -1183,6 +1183,7 @@ body {
 .contact-links {
   display: flex !important;
   flex-direction: row !important;
+  justify-content: center !important;
   align-items: center !important;
   gap: 18px !important;
 
