@@ -2,7 +2,7 @@
 const typingEl = document.getElementById("typing-text");
 if (typingEl) {
   const texts = [
-    "Web Developer with simple fundamentals in Python | Django | ML.",
+    "Developer with simple fundamentals in Python | Django | ML.",
     "Exploring DevOps, Cloud Computing, and scalable systems.",
     "Interested in Computer Networks & backend architecture.",
     "Learning how real-world systems work, not just tools.",
