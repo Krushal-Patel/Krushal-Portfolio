@@ -168,3 +168,10 @@ if (type === "other") {
 });
 
 
+// Handle mobile back properly
+window.addEventListener("pageshow", function (event) {
+  if (event.persisted) {
+    window.location.reload();
+  }
+});
+  
