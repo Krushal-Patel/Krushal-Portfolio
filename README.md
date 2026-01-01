@@ -19,4 +19,4 @@ It is deployed using **Cloudflare Pages**.
 
 ---
 
-## 📁 Project Structure
+
